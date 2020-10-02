@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".intro.IntroFragment">
+
+
+        <TextView
+            android:id="@+id/tittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="Masukan Nama Team"
+            android:textSize="26dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/teamName1"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:hint="Team 1"
+            app:layout_constraintStart_toStartOf="@+id/tittle"
+            app:layout_constraintTop_toBottomOf="@+id/tittle" />
+
+        <EditText
+            android:id="@+id/teamName2"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Team 2"
+            app:layout_constraintStart_toStartOf="@+id/teamName1"
+            app:layout_constraintTop_toBottomOf="@+id/teamName1" />
+
+        <Button
+            android:id="@+id/startBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Mulai"
+            app:layout_constraintStart_toStartOf="@+id/teamName2"
+            app:layout_constraintTop_toBottomOf="@+id/teamName2" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

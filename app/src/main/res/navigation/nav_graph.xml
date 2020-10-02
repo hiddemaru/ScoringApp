@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/introFragment">
+
+    <fragment
+        android:id="@+id/introFragment"
+        android:name="com.akbarprojec.scoringapp.intro.IntroFragment"
+        android:label="fragment_intro"
+        tools:layout="@layout/fragment_intro" >
+        <action
+            android:id="@+id/action_introFragment_to_scoringFragment"
+            app:destination="@id/scoringFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scoringFragment"
+        android:name="com.akbarprojec.scoringapp.score.ScoringFragment"
+        android:label="fragment_scoring"
+        tools:layout="@layout/fragment_scoring" >
+        <action
+            android:id="@+id/action_scoringFragment_to_finishFragment"
+            app:destination="@id/finishFragment" />
+        <argument
+            android:name="teamName1"
+            app:argType="string" />
+        <argument
+            android:name="teamName2"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/finishFragment"
+        android:name="com.akbarprojec.scoringapp.finish.FinishFragment"
+        android:label="FinishFragment" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </fragment>
+</navigation>
